@@ -1,0 +1,583 @@
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Inknut+Antiqua:700");
+
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+/* @import url("https://px.animaapp.com/67064d9f0686ae78fbbab316.670649cde3881df736624183.3xBvSNo.hch.png"); */
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --alto: #d9d9d9;
+  --black: #000000;
+  --soft-peach: #f6ecec;
+  --white: #ffffff;
+ 
+  --font-size-l: 30px;
+  --font-size-m: 24px;
+  --font-size-xl: 39px;
+ 
+  --font-family-inknut_antiqua: "Inknut Antiqua", Helvetica;
+}
+.inknutantiqua-bold-soft-peach-24px {
+  color: var(--soft-peach);
+  font-family: var(--font-family-inknut_antiqua);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* :root {
+} */
+
+
+/* screen - chats */
+
+.chats {
+  background-color: var(--white);
+  height: 1080px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 1920px;
+}
+
+.chats .bg-80h4JT {
+  background-color: transparent;
+  height: 1087px;
+  left: 0px;
+  position: absolute;
+  top: -2px;
+  width: 1938px;
+}
+
+.chats .image-1-bKVUgz {
+  background-color: transparent;
+  height: 1085px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 2px;
+  width: 1920px;
+}
+
+.chats .rectangle-1-bKVUgz {
+  background-color: #00000099;
+  height: 1085px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1938px;
+}
+
+.chats .rectangle-13-80h4JT {
+  background-color: #000000bf;
+  height: 1080px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 760px;
+}
+
+.chats .rectangle-25-80h4JT {
+  background-color: #000000bf;
+  height: 1080px;
+  left: 760px;
+  position: absolute;
+  top: 0px;
+  width: 1160px;
+}
+
+.chats .rectangle-14-80h4JT {
+  background-color: var(--alto);
+  height: 242px;
+  left: 0px;
+  opacity: 0.1;
+  position: absolute;
+  top: -12px;
+  width: 760px;
+}
+
+.chats .ellipse-2-80h4JT {
+  background-color: var(--white);
+  border-radius: 38px;
+  height: 76px;
+  left: 38px;
+  position: absolute;
+  top: 245px;
+  width: 76px;
+}
+
+.chats .ellipse-12-80h4JT {
+  background-color: var(--white);
+  border-radius: 38px;
+  height: 76px;
+  left: 38px;
+  position: absolute;
+  top: 647px;
+  width: 76px;
+}
+
+.chats .ellipse-10-80h4JT {
+  background-color: var(--white);
+  border-radius: 38px;
+  height: 76px;
+  left: 38px;
+  position: absolute;
+  top: 448px;
+  width: 76px;
+}
+
+.chats .ellipse-13-80h4JT {
+  background-color: var(--white);
+  border-radius: 38px;
+  height: 76px;
+  left: 38px;
+  position: absolute;
+  top: 850px;
+  width: 76px;
+}
+
+.chats .ellipse-9-80h4JT {
+  background-color: var(--white);
+  border-radius: 38px;
+  height: 76px;
+  left: 38px;
+  position: absolute;
+  top: 344px;
+  width: 76px;
+}
+
+.chats .ellipse-14-80h4JT {
+  background-color: var(--white);
+  border-radius: 38px;
+  height: 76px;
+  left: 38px;
+  position: absolute;
+  top: 746px;
+  width: 76px;
+}
+
+.chats .ellipse-11-80h4JT {
+  background-color: var(--white);
+  border-radius: 38px;
+  height: 76px;
+  left: 38px;
+  position: absolute;
+  top: 547px;
+  width: 76px;
+}
+
+.chats .ellipse-15-80h4JT {
+  background-color: var(--white);
+  border-radius: 38px;
+  height: 76px;
+  left: 38px;
+  position: absolute;
+  top: 949px;
+  width: 76px;
+}
+
+.chats .riya-80h4JT {
+  top: 252px;
+}
+
+.chats .riya-vSae9w {
+  top: 654px;
+}
+
+.chats .riya-yE7j4h {
+  top: 455px;
+}
+
+.chats .riya-GjiAUF {
+  top: 857px;
+}
+
+.chats .riya-BHlMVZ {
+  top: 352px;
+}
+
+.chats .riya-UaPst6 {
+  top: 754px;
+}
+
+.chats .riya-xMNZMX {
+  top: 555px;
+}
+
+.chats .riya-ORJ1ox {
+  top: 957px;
+}
+
+.chats .line-1-80h4JT {
+  background-color: transparent;
+  height: 10px;
+  left: 0px;
+  position: absolute;
+  top: 110px;
+  width: 760px;
+}
+
+.chats .profile-80h4JT {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-inknut_antiqua);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 29px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 21px;
+  width: auto;
+}
+
+.chats .chats-80h4JT {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-inknut_antiqua);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 24px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 135px;
+  width: auto;
+}
+
+.chats .ellipse-8-80h4JT {
+  background-color: var(--white);
+  border-radius: 38px;
+  height: 76px;
+  left: 638px;
+  position: absolute;
+  top: 21px;
+  width: 76px;
+}
+
+.chats .line-3-80h4JT {
+  background-color: transparent;
+  height: 1px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 331px;
+  width: 760px;
+}
+
+.chats .line-7-80h4JT {
+  background-color: transparent;
+  height: 1px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 733px;
+  width: 760px;
+}
+
+.chats .line-5-80h4JT {
+  background-color: transparent;
+  height: 1px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 534px;
+  width: 760px;
+}
+
+.chats .line-8-80h4JT {
+  background-color: transparent;
+  height: 1px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 936px;
+  width: 760px;
+}
+
+.chats .line-4-80h4JT {
+  background-color: transparent;
+  height: 1px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 434px;
+  width: 760px;
+}
+
+.chats .line-9-80h4JT {
+  background-color: transparent;
+  height: 1px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 836px;
+  width: 760px;
+}
+
+.chats .line-6-80h4JT {
+  background-color: transparent;
+  height: 1px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 637px;
+  width: 760px;
+}
+
+.chats .rectangle-26-80h4JT {
+  background-color: var(--alto);
+  height: 69px;
+  left: 824px;
+  position: absolute;
+  top: 943px;
+  width: 812px;
+}
+
+.chats .rectangle-27-80h4JT {
+  background-color: var(--alto);
+  border-radius: 25px;
+  height: 70px;
+  left: 1664px;
+  position: absolute;
+  top: 943px;
+  width: 164px;
+}
+
+.chats .title-80h4JT {
+  background-color: transparent;
+  color: #00000080;
+  font-family: var(--font-family-inknut_antiqua);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 786px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 924px;
+  width: 464px;
+}
+
+.chats .send-80h4JT {
+  background-color: transparent;
+  color: var(--black);
+  font-family: var(--font-family-inknut_antiqua);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 1658px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 926px;
+  width: 176px;
+}
+
+.chats .riya {
+  background-color: transparent;
+  height: auto;
+  left: 178px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  width: 283px;
+}

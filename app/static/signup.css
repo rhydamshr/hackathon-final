@@ -1,0 +1,564 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Inknut+Antiqua:700,400");
+
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+/* @import url("https://px.animaapp.com/67064d9f0686ae78fbbab316.670649cde3881df736624183.3xBvSNo.hch.png"); */
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --black: #000000;
+  --white: #ffffff87;
+  --white-2: #ffffff;
+ 
+  --font-size-l: 36px;
+  --font-size-m: 31px;
+  --font-size-s: 30px;
+  --font-size-xl: 54px;
+  --font-size-xxl: 70px;
+ 
+  --font-family-inknut_antiqua: "Inknut Antiqua", Helvetica;
+}
+.inknutantiqua-normal-black-31px {
+  color: var(--black);
+  font-family: var(--font-family-inknut_antiqua);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  border: #000000;
+}
+
+/* :root {
+} */
+
+
+/* screen - signup */
+
+.signup {
+  background-color: var(--white-2);
+  height: 1080px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 1920px;
+}
+
+.signup .bg-mLm6Nf {
+  background-color: transparent;
+  height: 1087px;
+  left: 0px;
+  position: absolute;
+  top: -7px;
+  width: 1920px;
+}
+
+.signup .image-1-4brZKL {
+  background-color: transparent;
+  height: 1085px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 2px;
+  width: 1920px;
+}
+
+.signup .rectangle-1-4brZKL {
+  background-color: #00000099;
+  height: 1087px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1920px;
+}
+
+.signup .rectangle-11-mLm6Nf {
+  background-color: var(--white);
+  border-radius: 20px;
+  height: 265px;
+  left: 131px;
+  position: absolute;
+  top: 659px;
+  width: 703px;
+}
+
+.signup .rectangle-10-mLm6Nf {
+  background-color: #00000080;
+  border-radius: 40px;
+  height: 100px;
+  left: 1274px;
+  position: absolute;
+  top: 963px;
+  width: 300px;
+}
+.rectangle-10-mLm6Nf {
+  background-color: #00000080;
+  border-radius: 40px;
+  height: 100px;
+  left: 1274px;
+  position: absolute;
+  top: 963px;
+  width: 300px;
+}
+
+.signup .rectangle-5-mLm6Nf {
+  top: 477px;
+}
+
+.signup .rectangle-6-mLm6Nf {
+  background-color: var(--white);
+  border-radius: 20px;
+  height: 78px;
+  left: 1070px;
+  position: absolute;
+  top: 345px;
+  width: 647px;
+}
+
+.edit-profile-zYNucu {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-inknut_antiqua);
+  font-size:15px;
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 1611px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 101px;
+  width: auto;
+}
+
+
+.signup .rectangle-2-mLm6Nf {
+  background-color: #00000080;
+  border-radius: 40px;
+  height: 100px;
+  left: 234px;
+  position: absolute;
+  top: 505px;
+  width: 590px;
+}
+
+.rectangle-23-mLm6Nf {
+  background-color: #00000080;
+  border-radius: 40px;
+  height: 48px;
+  left: 460px;
+  position: absolute;
+  top: 608px;
+  width: 240px;
+}
+
+.signup .rectangle-4-mLm6Nf {
+  background-color: var(--white);
+  border-radius: 20px;
+  height: 78px;
+  left: 1070px;
+  position: absolute;
+  top: 601px;
+  width: 647px;
+}
+
+.signup .rectangle-8-mLm6Nf {
+  background-color: var(--white);
+  border-radius: 20px;
+  height: 78px;
+  left: 1067px;
+  position: absolute;
+  top: 228px;
+  width: 647px;
+}
+
+.signup .rectangle-5-gsCbby {
+  top: 715px;
+}
+
+.signup .rectangle-12-mLm6Nf {
+  background-color: var(--white);
+  border-radius: 20px;
+  height: 78px;
+  left: 1070px;
+  position: absolute;
+  top: 846px;
+  width: 647px;
+}
+
+.signup .soulz-mLm6Nf {
+  background-color: transparent;
+  color: var(--white-2);
+  font-family: var(--font-family-inknut_antiqua);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 362px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 352px;
+  width: auto;
+}
+
+.signup .name-mLm6Nf {
+  background-color: transparent;
+  height: auto;
+  left: 1094px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 228px;
+  width: 501px;
+  border: #000000;
+}
+
+.signup .phone-no-mLm6Nf {
+  background-color: transparent;
+  height: auto;
+  left: 1094px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 344px;
+  width: 262px;
+}
+
+.signup .email-id-mLm6Nf {
+  background-color: transparent;
+  height: auto;
+  left: 1094px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 473px;
+  width: 247px;
+}
+
+.signup .logo-1-mLm6Nf {
+  background-color: transparent;
+  height: 337px;
+  left: 266px;
+  position: absolute;
+  top: 48px;
+  width: 345px;
+}
+
+.signup .title-mLm6Nf {
+  background-color: transparent;
+  color: var(--white-2);
+  font-family: var(--font-family-inknut_antiqua);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 543px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: -3px;
+  width: 986px;
+}
+
+.signup .date-of-birth-mLm6Nf {
+  background-color: transparent;
+  height: auto;
+  left: 1094px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 599px;
+  width: 378px;
+}
+
+.signup .upload-photo-mLm6Nf {
+  background-color: transparent;
+  color: var(--white-2);
+  font-family: var(--font-family-inknut_antiqua);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 261px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 507px;
+  width: auto;
+}
+
+.signup .add-preferences-mLm6Nf {
+  background-color: transparent;
+  color: var(--black);
+  font-family: var(--font-family-inknut_antiqua);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 200;
+  height: 200px;
+  left: 150px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 673px;
+  width: 650px;
+}
+
+.signup .enter-password-mLm6Nf {
+  background-color: transparent;
+  height: auto;
+  left: 1094px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 714px;
+  width: 475px;
+}
+
+.signup .confirm-password-mLm6Nf {
+  background-color: transparent;
+  height: auto;
+  left: 1094px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 841px;
+  width: 475px;
+}
+
+.file--upload > label {
+  color: hsl(204, 86%, 53%);
+  border-color: hsl(204, 86%, 53%);
+}
+
+.file--upload > label:active {
+  background-color: hsl(204,86%,91%);
+}
+
+
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+.signup .sign-up-mLm6Nf {
+  background-color: transparent;
+  color: var(--white-2);
+  font-family: var(--font-family-inknut_antiqua);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 1303px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 965px;
+  width: 300px;
+}
+
+.signup .rectangle-5 {
+  background-color: var(--white);
+  border-radius: 20px;
+  height: 78px;
+  left: 1070px;
+  position: absolute;
+  width: 647px;
+}

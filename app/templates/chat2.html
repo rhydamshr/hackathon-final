@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="//cdn.socket.io/4.4.1/socket.io.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      let socket;
+      $(document).ready(function(){
+        socket = io.connect('http://' + document.domain + ':' + location.port + '/chat');
+        socket.on('connect', function() {
+          socket.emit('joined', {});
+        });
+        socket.on('status', function(data) {
+          d = new Date();
+          $('#chat').val($('#chat').val() + `[${d.toLocaleTimeString()}] <${data.msg}>\n`);
+          $('#chat').scrollTop($('#chat')[0].scrollHeight);
+        });
+        socket.on('message', function(data) {
+          $('#chat').val($('#chat').val() + `[${d.toLocaleTimeString()}] ${data.msg}\n`);
+          $('#chat').scrollTop($('#chat')[0].scrollHeight);
+        });
+        $('#text').keypress(function(e) {
+          const code = e.keyCode || e.which;
+          if (code == 13) {
+            text = $('#text').val();
+            $('#text').val('');
+            socket.emit('text', {msg: text});
+          }
+        });
+      });
+      function leave_room() {
+        socket.emit('left', {}, function() {
+          socket.disconnect();
+
+          // go back to the login page
+          window.location.href = "{{ url_for('main.index') }}";
+        });
+      }
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1920, maximum-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png">
+    <meta name="og:type" content="website">
+    <meta name="twitter:card" content="photo">
+    <script id="anima-load-script" src="load.js"></script>
+    <script id="anima-hotspots-script" src="hotspots.js"></script>
+    <script id="anima-overrides-script" src="overrides.js"></script>
+    <script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script>
+    <link rel="stylesheet" href="./static/chat.css">
+</head>
+<body style="margin: 0; background: #ffffff;">
+    <h1>Flask-SocketIO-Chat: {{ room }}</h1>
+    <textarea class="rectangle-25-80h4JT" cols="80" rows="20"></textarea><br><br>
+    <input size="80" class="title-80h4JT" placeholder="Enter your message here"><br><br>
+    <a href="#" onclick="leave_room();">Leave this room<
+    <input type="hidden" id="anPageName" name="page" value="chats">
+    <div class="container-center-horizontal">
+        <div class="chats screen" data-id="38:2">
+            <div class="bg-80h4JT" data-id="38:3">
+                <img class="image-1-bKVUgz" data-id="38:4" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670649d0e3881df73662418a/releases/670accd33327fca10fb360f9/img/image-1.png" alt="image 1">
+                <div class="rectangle-1-bKVUgz" data-id="38:5"></div>
+            </div>
+            <div class="rectangle-13-80h4JT" data-id="38:19"></div>
+            <!-- <div class="rectangle-25-80h4JT" data-id="41:2"></div> -->
+            <div class="rectangle-14-80h4JT" data-id="37:15"></div>
+            <div class="ellipse-2-80h4JT" data-id="37:30"></div>
+            <div class="ellipse-12-80h4JT" data-id="37:89"></div>
+            <div class="ellipse-10-80h4JT" data-id="37:48"></div>
+            <div class="ellipse-13-80h4JT" data-id="37:90"></div>
+            <div class="ellipse-9-80h4JT" data-id="37:45"></div>
+            <div class="ellipse-14-80h4JT" data-id="37:91"></div>
+            <div class="ellipse-11-80h4JT" data-id="37:49"></div>
+            <div class="ellipse-15-80h4JT" data-id="37:92"></div>
+            <div class="riya-80h4JT riya inknutantiqua-bold-soft-peach-24px" data-id="37:42">Riya</div>
+            <div class="riya-vSae9w riya inknutantiqua-bold-soft-peach-24px" data-id="37:93">Riya</div>
+            <div class="riya-yE7j4h riya inknutantiqua-bold-soft-peach-24px" data-id="37:50">Riya</div>
+            <div class="riya-GjiAUF riya inknutantiqua-bold-soft-peach-24px" data-id="37:94">Riya</div>
+            <div class="riya-BHlMVZ riya inknutantiqua-bold-soft-peach-24px" data-id="37:46">Riya</div>
+            <div class="riya-UaPst6 riya inknutantiqua-bold-soft-peach-24px" data-id="37:95">Riya</div>
+            <div class="riya-xMNZMX riya inknutantiqua-bold-soft-peach-24px" data-id="37:51">Riya</div>
+            <div class="riya-ORJ1ox riya inknutantiqua-bold-soft-peach-24px" data-id="37:96">Riya</div>
+            <img class="line-1-80h4JT" data-id="39:2" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670649d0e3881df73662418a/releases/670b0174b917ddc67f4bed45/img/line-1.svg" alt="Line 1">
+            <div class="profile-80h4JT" data-id="39:3">Profile</div>
+            <div class="chats-80h4JT" data-id="39:5">CHATS</div>
+            <div class="ellipse-8-80h4JT" data-id="39:4"></div>
+            <img class="line-3-80h4JT" data-id="37:44" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670649d0e3881df73662418a/releases/670b0174b917ddc67f4bed45/img/line-3.svg" alt="Line 3">
+            <img class="line-7-80h4JT" data-id="37:99" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670649d0e3881df73662418a/releases/670b0174b917ddc67f4bed45/img/line-3.svg" alt="Line 7">
+            <img class="line-5-80h4JT" data-id="37:53" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670649d0e3881df73662418a/releases/670b0174b917ddc67f4bed45/img/line-3.svg" alt="Line 5">
+            <img class="line-8-80h4JT" data-id="37:100" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670649d0e3881df73662418a/releases/670b0174b917ddc67f4bed45/img/line-3.svg" alt="Line 8">
+            <img class="line-4-80h4JT" data-id="37:47" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670649d0e3881df73662418a/releases/670b0174b917ddc67f4bed45/img/line-3.svg" alt="Line 4">
+            <img class="line-9-80h4JT" data-id="37:101" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670649d0e3881df73662418a/releases/670b0174b917ddc67f4bed45/img/line-3.svg" alt="Line 9">
+            <img class="line-6-80h4JT" data-id="37:54" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/670649d0e3881df73662418a/releases/670b0174b917ddc67f4bed45/img/line-3.svg" alt="Line 6">
+            <div class="rectangle-26-80h4JT" data-id="41:3"></div>
+            <div class="rectangle-27-80h4JT" data-id="41:6"></div>
+            <!-- <h1 class="title-80h4JT" data-id="41:5">enter message</h1> -->
+            <div class="send-80h4JT" data-id="41:7">Send</div>
+        </div>
+    </div>
+    <script src="launchpad-js/launchpad-banner.js" async></script

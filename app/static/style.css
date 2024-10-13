@@ -1,0 +1,411 @@
+/* 
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"); */
+
+@import url("https://fonts.googleapis.com/css?family=Comic+Neue:700|Inknut+Antiqua:700");
+
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --black: #000000;
+  --white: #ffffff;
+ 
+  --font-size-l: 38px;
+  --font-size-m: 23px;
+  --font-size-xl: 54px;
+ 
+  --font-family-comic_neue: "Comic Neue", Helvetica;
+  --font-family-inknut_antiqua: "Inknut Antiqua", Helvetica;
+}
+.inknutantiqua-bold-white-23px {
+  color: var(--white);
+  font-family: var(--font-family-inknut_antiqua);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+}
+/* 
+:root {
+} */
+
+
+/* screen - main */
+
+.main {
+  background-color: var(--white);
+  height: 1080px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 1920px;
+}
+
+.main .bg-aygV59 {
+  background-color: transparent;
+  height: 1087px;
+  left: 0px;
+  position: absolute;
+  top: -2px;
+  width: 1920px;
+}
+
+.main .image-1-wWTSWe {
+  background-color: transparent;
+  height: 1080px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 2px;
+  width: 1920px;
+}
+
+.main .rectangle-1-wWTSWe {
+  background-color: #00000099;
+  height: 1087px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1920px;
+}
+
+.main .rectangle-2-aygV59 {
+  background-color: #000000ab;
+  border-radius: 10px;
+  height: 68px;
+  left: 788px;
+  position: absolute;
+  top: 563px;
+  width: 173px;
+}
+
+.main .rectangle-3-aygV59 {
+  background-color: #000000ab;
+  border-radius: 10px;
+  height: 68px;
+  left: 983px;
+  position: absolute;
+  top: 563px;
+  width: 173px;
+}
+
+.main .login-aygV59 {
+  background-color: transparent;
+  color: #ff00a1;
+  font-family: var(--font-family-comic_neue);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 1023px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 577px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.main .register-aygV59 {
+  background-color: transparent;
+  color: #ff00a1;
+  font-family: var(--font-family-comic_neue);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 812px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 576px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.main .title-aygV59 {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-inknut_antiqua);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 1px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 427px;
+  white-space: nowrap;
+  width: 1920px;
+}
+
+.main .text-aygV59 {
+  background-color: transparent;
+  height: 61px;
+  left: 1069px;
+  position: absolute;
+  top: 83px;
+  width: 791px;
+}
+
+.main .about-us-b5flLD {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  width: auto;
+}
+
+.main .faq-b5flLD {
+  background-color: transparent;
+  height: auto;
+  left: 243px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  width: auto;
+}
+
+.main .pricing-b5flLD {
+  background-color: transparent;
+  height: auto;
+  left: 412px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 2px;
+  width: auto;
+}
+
+.main .contact-us-b5flLD {
+  background-color: transparent;
+  height: auto;
+  left: 601px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 2px;
+  width: auto;
+}
+
+.main .soulz-aygV59 {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-inknut_antiqua);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 229px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 43px;
+  width: auto;
+}
+
+.main .logo-1-aygV59 {
+  background-color: transparent;
+  height: 120px;
+  left: 70px;
+  position: absolute;
+  top: 60px;
+  width: 123px;
+}
