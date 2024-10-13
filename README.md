@@ -1,8 +1,7 @@
-Flask-SocketIO-Chat
-===================
+OVERNIGHT HACKATHON
 
-A simple chat application that demonstrates how to structure a Flask-SocketIO application.
+DATING APP
 
-To run this application install the requirements in a virtual environment, run `python chat.py` and visit `http://localhost:5000` on one or more browser tabs.
+2nd YEAR PS
 
-    $ python chat.py
+(BONUS POINTS PLS)
